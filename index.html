@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Consulte gratuitamente se você possui valores a receber de fundos esquecidos, benefícios ou restituições. Plataforma educativa, rápida e segura.">
-  <meta name="keywords" content="consulta, valores a receber, fundos esquecidos, restituição, CPF, consulta gratuita, regularização, educativa">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta de Valores a Receber - Plataforma Educativa</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Verifique gratuitamente orientações educativas sobre possíveis valores a receber, benefícios e restituições. Plataforma rápida, segura e em conformidade com a LGPD.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.consultaresgataveis.com/">
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Consulta de Valores a Receber - Plataforma Educativa">
-  <meta property="og:description" content="Descubra se você tem valores esquecidos para receber. Consulta gratuita, educativa e segura.">
+  <meta property="og:description" content="Descubra, de forma educativa, como consultar valores esquecidos e procedimentos financeiros. Rápido, seguro e sem pedir dados sensíveis.">
   <meta property="og:image" content="images/logo.png">
-  <meta property="og:url" content="https://www.consultaresgataveis.com">
+  <meta property="og:url" content="https://www.consultaresgataveis.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- UX / Tema -->
   <meta name="theme-color" content="#2196f3">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Performance das fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <title>Consulta de Valores a Receber - Plataforma Educativa</title>
+
   <style>
     :root {
       --primary: #2196f3;
@@ -23,13 +35,9 @@
       --text: #222;
       --muted: #6c757d;
       --radius: 18px;
+      --shadow: 0 4px 24px rgba(33,150,243,0.10);
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', Arial, sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', Arial, sans-serif; }
     body {
       background: var(--background);
       color: var(--text);
@@ -46,21 +54,9 @@
       border-bottom-right-radius: var(--radius);
       box-shadow: 0 2px 12px rgba(33,150,243,0.08);
     }
-    .logo {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #e3f2fd;
-      font-weight: 400;
-    }
+    .logo { width: 60px; height: 60px; margin-bottom: 10px; }
+    header h1 { font-size: 2.1rem; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 1.1rem; color: #e3f2fd; font-weight: 400; }
     main {
       flex: 1;
       display: flex;
@@ -71,7 +67,7 @@
     .main-card {
       background: var(--white);
       border-radius: var(--radius);
-      box-shadow: 0 4px 24px rgba(33,150,243,0.10);
+      box-shadow: var(--shadow);
       max-width: 420px;
       width: 100%;
       padding: 32px 24px 24px 24px;
@@ -80,26 +76,10 @@
       flex-direction: column;
       gap: 18px;
     }
-    .main-card h2 {
-      color: var(--primary);
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-    }
-    .main-card p {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 0;
-    }
-    .benefits {
-      text-align: left;
-      margin: 0 0 10px 0;
-    }
-    .benefits li {
-      margin-bottom: 7px;
-      color: var(--secondary);
-      font-weight: 500;
-      list-style: disc inside;
-    }
+    .main-card h2 { color: var(--primary); font-size: 1.4rem; margin-bottom: 8px; }
+    .main-card p { color: var(--muted); font-size: 1rem; margin-bottom: 0; }
+    .benefits { text-align: left; margin: 0 0 10px 0; }
+    .benefits li { margin-bottom: 7px; color: var(--secondary); font-weight: 500; list-style: disc inside; }
     .cta-btn {
       background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
       color: var(--white);
@@ -114,10 +94,9 @@
       width: 100%;
       box-shadow: 0 2px 8px rgba(33,150,243,0.08);
     }
-    .cta-btn:hover {
-      background: linear-gradient(90deg, #1976d2 60%, #388e3c 100%);
-      transform: scale(1.03);
-    }
+    .cta-btn:hover { background: linear-gradient(90deg, #1976d2 60%, #388e3c 100%); transform: scale(1.03); }
+    .cta-btn:focus-visible { outline: 3px solid #bbdefb; outline-offset: 2px; }
+
     .privacy {
       background: #e3fcec;
       color: #256029;
@@ -133,110 +112,150 @@
       margin: 0 0 10px 0;
       color: #1565c0;
       font-size: 1rem;
+      text-align: left;
     }
-    nav {
-      margin: 18px 0 0 0;
-      display: flex;
+    nav { margin: 18px 0 0 0; display: flex; justify-content: center; gap: 18px; }
+    nav a { color: var(--primary); text-decoration: none; font-size: 0.98rem; transition: color 0.2s; }
+    nav a:hover { color: var(--secondary); }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.92rem; padding: 18px 0 10px 0; background: none; }
+
+    /* Modal do Typebot */
+    #chatbotModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 9999;
       justify-content: center;
-      gap: 18px;
+      align-items: center;
     }
-    nav a {
-      color: var(--primary);
-      text-decoration: none;
-      font-size: 0.98rem;
-      transition: color 0.2s;
+    #chatbotDialog {
+      width: 95vw;
+      max-width: 600px;
+      height: 80vh;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      border: none;
     }
-    nav a:hover {
-      color: var(--secondary);
-    }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.92rem;
-      padding: 18px 0 10px 0;
-      background: none;
-    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 1.3rem; }
       .main-card { padding: 18px 6px 18px 6px; }
       .main-card h2 { font-size: 1.1rem; }
       .main-card p, .how-section, .privacy { font-size: 0.93rem; }
     }
-    /* Modal do Typebot */
-    #chatbotModal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.5);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-    }
-    #chatbotModal typebot-standard {
-      width: 95vw;
-      max-width: 600px;
-      height: 80vh;
-      border-radius: 12px;
-      background: white;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    }
   </style>
+
+  <!-- Schema.org (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Plataforma Educativa de Consulta",
+    "url": "https://www.consultaresgataveis.com/",
+    "logo": "https://www.consultaresgataveis.com/images/logo.png",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
-  <header>
+  <header role="banner">
     <h1>Consulta Online</h1>
-    <p>Descubra gratuitamente informações sobre possíveis benefícios e orientações financeiras.</p>
+    <p>Descubra gratuitamente informações educativas sobre procedimentos e possíveis benefícios financeiros.</p>
   </header>
-  <main>
-    <section class="main-card" aria-label="Consulta gratuita">
-      <h2>Consulte agora mesmo, sem custo!</h2>
-      <p>Verifique se há informações relevantes associadas ao seu perfil. Plataforma educativa, rápida e segura.</p>
-      <ul class="benefits">
+
+  <main id="conteudo" role="main">
+    <section class="main-card" aria-labelledby="titulo-card">
+      <h2 id="titulo-card">Consulte agora mesmo, sem custo!</h2>
+      <p>Verifique, de forma educativa, se há orientações relevantes associadas ao seu perfil. Rápido e seguro.</p>
+
+      <ul class="benefits" aria-label="Vantagens da consulta">
         <li>Consulta educativa e sem custo</li>
         <li>Sem necessidade de dados bancários</li>
-        <li>Orientações educativas sobre procedimentos financeiros</li>
-        <li>Privacidade e segurança garantidas (LGPD)</li>
+        <li>Orientações sobre procedimentos financeiros</li>
+        <li>Privacidade e segurança (LGPD)</li>
       </ul>
-      <button class="cta-btn" id="chatButton" aria-label="Iniciar consulta">Iniciar Consulta</button>
-      <div class="privacy" role="alert">
-        Não solicitamos dados sensíveis. Consulta independente, educativa e segura. Em conformidade com a LGPD.
+
+      <button class="cta-btn" id="chatButton" aria-controls="chatbotModal" aria-expanded="false">
+        Iniciar Consulta
+      </button>
+
+      <div class="privacy" role="status">
+        Não solicitamos dados sensíveis. Consulta independente, educativa e segura, em conformidade com a LGPD.
       </div>
-      <div class="how-section">
+
+      <div class="how-section" aria-label="Como funciona">
         <strong>Como funciona?</strong><br>
-        Clique em "Iniciar Consulta" e siga as orientações do assistente virtual. Você receberá informações educativas sobre como proceder em diferentes situações financeiras.
+        Clique em “Iniciar Consulta” e siga as orientações do assistente virtual. Você receberá informações educativas sobre como proceder em diferentes situações financeiras.
       </div>
-      <nav>
-        <a href="politica-privacidade.html">Política de Privacidade</a>
-        <a href="termos-uso.html">Termos de Uso</a>
+
+      <nav aria-label="Links úteis">
+        <a href="politica-privacidade.html" rel="nofollow">Política de Privacidade</a>
+        <a href="termos-uso.html" rel="nofollow">Termos de Uso</a>
       </nav>
     </section>
   </main>
-  <footer>
+
+  <footer role="contentinfo">
     © 2025 - Plataforma Educativa de Consulta. Todos os direitos reservados.
   </footer>
-  <!-- Modal do Chatbot -->
-  <div id="chatbotModal">
-    <typebot-standard style="width: 100%; height: 100%;"></typebot-standard>
+
+  <!-- Modal do Chatbot (acessível) -->
+  <div id="chatbotModal" role="dialog" aria-modal="true" aria-labelledby="chatbotTitle">
+    <div id="chatbotDialog">
+      <h2 id="chatbotTitle" class="sr-only" style="position:absolute;left:-9999px;">Assistente virtual</h2>
+      <typebot-standard style="width: 100%; height: 100%;"></typebot-standard>
+    </div>
   </div>
-  <script type="module">
-    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.59/dist/web.js';
-    Typebot.initStandard({
-      typebot: "teste1",
-      apiHost: "https://chat.bestbot.su",
-      onInit: () => { console.log('Bot initialized'); },
-      onEnd: () => {
-        const query = window.location.search;
-        window.location.href = "./fila.html" + query;
-      },
-    });
+
+  <!-- Script: carregamento e acessibilidade -->
+  <script type="module" defer>
+    // Carrega o Typebot de forma assíncrona e inicializa somente quando necessário
     const chatButton = document.getElementById('chatButton');
     const chatbotModal = document.getElementById('chatbotModal');
-    chatButton.addEventListener('click', function () {
+    const chatbotDialog = document.getElementById('chatbotDialog');
+
+    function openModal() {
       chatbotModal.style.display = 'flex';
+      chatButton.setAttribute('aria-expanded', 'true');
+      // Foco inicial para acessibilidade
+      chatbotDialog.setAttribute('tabindex', '-1');
+      chatbotDialog.focus();
+    }
+    function closeModal() {
+      chatbotModal.style.display = 'none';
+      chatButton.setAttribute('aria-expanded', 'false');
+      chatButton.focus();
+    }
+
+    // Fecha ao clicar fora do conteúdo
+    chatbotModal.addEventListener('click', (event) => {
+      if (event.target === chatbotModal) closeModal();
     });
-    chatbotModal.addEventListener('click', function (event) {
-      if (event.target === chatbotModal) {
-        chatbotModal.style.display = 'none';
+
+    // Fecha com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && chatbotModal.style.display === 'flex') closeModal();
+    });
+
+    // Abertura do modal + import dinâmico do Typebot
+    chatButton.addEventListener('click', async () => {
+      openModal();
+      try {
+        const { default: Typebot } = await import('https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.59/dist/web.js');
+        Typebot.initStandard({
+          typebot: 'teste1',
+          apiHost: 'https://chat.bestbot.su',
+          onInit: () => { console.log('Bot initialized'); },
+          onEnd: () => {
+            const query = window.location.search;
+            window.location.href = './fila.html' + query;
+          }
+        });
+      } catch (err) {
+        console.error('Falha ao carregar o Typebot:', err);
       }
     });
   </script>
